@@ -4,7 +4,9 @@
 TensorFlowやChainerのサンプルコードをもとに、ニューラルネットワークの理論的背景を調査  
 
 ## トピックス
-[ディープラーニングについて](/deeplarning.md)
+[ディープラーニングについて](/topics/deeplarning.md)  
+[プロセッサのこと](/topics/processor.md)  
+[強いAI・弱いAI](/topics/strong_weak.md)
 
 ## マインドマップ
 ![AIについてのマインドマップ](/mindmap/AI_mindmap.jpg)
