@@ -1,12 +1,15 @@
 # AIについてのお勉強
 
-## TODO(今後のお勉強方針)
-TensorFlowやChainerのサンプルコードをもとに、ニューラルネットワークの理論的背景を調査  
-
 ## トピックス
 [ディープラーニングについて](/topics/deeplarning.md)  
 [プロセッサのこと](/topics/processor.md)  
 [強いAI・弱いAI](/topics/strong_weak.md)
+
+## TensorFlowのチュートリアル実施
+[準備メモ](/TensorFlow/01_prepare.md)  
+[チュートリアル_手書き文字(その1)](/TensorFlow/02_MNIST_simple.md)  
+[チュートリアル_手書き文字(その2)](/TensorFlow/03_MNIST_deep.md)  
+※学習継続中※
 
 ## マインドマップ
 ![AIについてのマインドマップ](/mindmap/AI_mindmap.jpg)
