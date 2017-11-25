@@ -31,8 +31,9 @@ def bias_variable(shape):
 #     指定は[1, stride, stride, 1]とする必要がある
 #   第4引数: padding
 #     inputの周囲をパディングする方法を指定
-#     'SAME'は0パディングすることを示す
-# つまりここではストライド1、0パディングを使用するようにする
+#     'SAME'はフィルタ分を補うように0パディングすることを示す
+#     (つまりフィルタ適用後も画素数は変化しない)
+# つまりここではストライド1、画素数保持のパディングで畳み込みを行う
 def conv2d(x, W):
   return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')
 
