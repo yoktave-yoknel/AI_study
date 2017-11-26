@@ -5,11 +5,11 @@
 [プロセッサのこと](/topics/processor.md)  
 [強いAI・弱いAI](/topics/strong_weak.md)
 
-## TensorFlowのチュートリアル実施
+## TensorFlowを使ったニューラルネットワークの実装
 [準備メモ](/TensorFlow/01_prepare.md)  
 [チュートリアル_手書き文字(その1)](/TensorFlow/02_MNIST_simple.md)  
 [チュートリアル_手書き文字(その2)](/TensorFlow/03_MNIST_deep.md)  
-※学習継続中※
+[再帰的ニューラルネットワークを使用した手書き文字認識](TensorFlow\04_recurrent.md)  ※作成中※
 
 ## マインドマップ
 ![AIについてのマインドマップ](/mindmap/AI_mindmap.jpg)
