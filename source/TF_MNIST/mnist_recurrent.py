@@ -3,19 +3,49 @@ import tensorflow as tf
 from tensorflow.contrib import rnn
 
 # 再帰的ニューラルネットワークのモデルを定義
+# 手書き文字画像を上から1行ずつ読み込む
 def RNN(x):
+    # unstackメソッドでテンソルを分解する
+    # ここでやりたいことは[n枚, 28ピクセル, 28ピクセル]となっている手書き文字画像を
+    # 上から1列ずつ読んでいくこと
+    # unstackメソッドの引数は以下のようになっている
+    # 第1引数: 分解するテンソル
+    # 第2引数: 第3引数で指定する次元の長さ
+    #         ここでは画像の縦幅である28を指定する
+    # 第3引数: 指定した次元に基づいてテンソルを分解する(0始まり)
+    #         ここでは1つ目、つまり画像の縦幅の次元で分解している(つまり上から読む)
+    # 第4引数: 操作の名前を指定する
+    #         ここでは何も指定していないのでデフォルトの"unstack"となる
     x = tf.unstack(x, 28, 1)
 
-    # LSTMセルを定義する
+    # 再帰型ニューラルネットワークにて使用するLSTM(Long short-term memory)セルを定義する
+    # 第1引数: LSTMセルが持つユニットの数
+    #         ここでは128個の隠れ層のユニットを持たせる
+    # 第2引数: 忘却ゲートのバイアス値
+    #         バイアス値には1や5を設定するのがよいとされている
     lstm_cell = rnn.BasicLSTMCell(128, forget_bias=1.0)
 
     # モデルの定義。各タイムステップの出力値と状態が返される
+    # 再帰型ニューラルネットワークを定義する
+    # 第1引数: 再帰型ニューラルネットワークが使用するセル
+    #         ここでは先ほど定義したLSTMセルを使用
+    # 第2引数: 入力となるテンソル
+    #         ここでは上から読み込んでいった手書き文字画像を示すテンソル
+    # 第3引数: データタイプ
+    #         ここではピクセル濃度(0～1)なので浮動小数点型
+    # 戻り値となるのは各タイムステップの出力値と状態
     outputs, states = rnn.static_rnn(lstm_cell, x, dtype=tf.float32)
 
-    # 変数定義
+    # 変数である重みとバイアスを定義する
+    # 重みはセルのユニット(128個)と数字の種類(10)で構成される
+    # バイアスは数字の種類(10)に対して設定する
     weight = tf.Variable(tf.random_normal([128, 10]))
     bias = tf.Variable(tf.random_normal([10]))
 
+    # 再帰型ニューラルネットワークの出力値に対して
+    # 重みを掛け、バイアスを加算する
+    # これが手書き文字画像がどの数字に該当するかの情報となる
+    # ※後で確率に変換するためにsoftmax関数を適用する
     return tf.matmul(outputs[-1], weight) + bias
 
 
@@ -33,9 +63,11 @@ x = tf.placeholder("float", [None, 28, 28])
 # 正解箇所には1、それ以外には0が入っている(前述のone_hot表現)
 y_ = tf.placeholder("float", [None, 10])
 
+# 再帰型ニューラルネットワークを用いて手書き文字画像の解析を行う
 preds = RNN(x)
 
 # 誤差を交差エントロピーで算出
+# 解析結果をsoftmax関数で確率に変換してから交差エントロピーを算出する
 cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=preds, labels=y_))
 
 # Adam法を使用して交差エントロピーの最小化を行う
@@ -62,7 +94,7 @@ with tf.Session() as sess:
     # stepに実行回数を設定し、10万件の学習を行うまでループ
     step = 1
     while step * batch_size < n_training_iters:
-        # 手書き文字データから抽出し120剣のデータを取得
+        # 手書き文字データから抽出し120件のデータを取得
         batch_x, batch_y = mnist.train.next_batch(batch_size)
         # next_batchで返されるbatch_xは[batch_size, 784]のテンソルなので
         # batch_size×28×28に変換

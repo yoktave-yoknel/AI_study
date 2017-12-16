@@ -17,9 +17,19 @@ webでは手書き文字認識を題材に再帰的ニューラルネットワ�
 RNN：時系列データを扱うRecurrent Neural Networksとは  
 https://deepage.net/deep_learning/2017/05/23/recurrent-neural-networks.html
 
-※他にも数列の合算を題材にした例がある。  
-TensorFlowのRNNを基本的なモデルで試す  
-https://qiita.com/yukiB/items/f6314d2861fc8d9b739f
-
 処理の内容をコメントしたソースコードはこちら  
 [mnist_recurrent.py](../source/TF_MNIST/mnist_recurrent.py)  
+
+仕組みとしては以下の図のようになっている。  
+再帰型ニューラルネットワークは、LSTM(Long short-term memory)セルで構成されるものを使用する。  
+LSTMセルは内部に隠れ層を持っており、今回は隠れ層の数を128に設定している。  
+ここに手書き文字画像を上から1行ずつ読み込ませて、どの数字になるかの予想を行う。  
+![処理の概略イメージ](images/RNN_image.gif)  
+
+実行結果  
+~~~
+Test Accuracy: 0.984375
+~~~
+
+LSTMについては下記サイトに日本語訳のものがある。  
+https://qiita.com/KojiOhki/items/89cd7b69a8a6239d67ca
