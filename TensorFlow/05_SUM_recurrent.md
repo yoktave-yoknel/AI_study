@@ -6,7 +6,7 @@ TensorFlowのRNNを基本的なモデルで試す
 https://qiita.com/yukiB/items/f6314d2861fc8d9b739f  
 
 TensorFlowのバージョンが古いのと、TensorBard関連のエラーが発生したのでダウンロードしてきたソースを改変した。  
-顛末については[こちら](/05.1_SUM_debugging.md)を参照。
+顛末については[こちら](/TensorFlow/05.1_SUM_debugging.md)を参照。
 
 作成したソースコードはこちら。  
 [sum_reccurent.py](../source/TF_SUM/sum_reccurent.py)  
