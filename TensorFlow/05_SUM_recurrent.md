@@ -5,8 +5,38 @@
 TensorFlowのRNNを基本的なモデルで試す  
 https://qiita.com/yukiB/items/f6314d2861fc8d9b739f  
 
-TensorFlowのバージョンがやや古いので、まずはダウンロードしたソースコードのエラー取りから。。。  
+TensorFlowのバージョンが古いのと、TensorBard関連のエラーが発生したのでダウンロードしてきたソースを改変した。  
+顛末については[こちら](/05.1_SUM_debugging.md)を参照。
+
+作成したソースコードはこちら。  
+[sum_reccurent.py](../source/TF_SUM/sum_reccurent.py)  
+
+実行結果は以下のようになった。  
 ~~~
-ValueError: Tensor conversion requested dtype int32 for Tensor with dtype float32: 'Tensor("inference/add:0", shape=(?, 80), dtype=float32)'
-TypeError: Input 'split_dim' of 'Split' Op has type float32 that does not match expected type of int32.
+0.0
+1.0
+1.0
+1.0
+1.0
+0.0
+1.0
+0.0
+1.0
+0.0
+output: 6.009393, correct: 6
+0.0
+1.0
+0.0
+1.0
+0.0
+1.0
+1.0
+0.0
+1.0
+1.0
+output: 6.004642, correct: 6
+accuracy 0.950000
 ~~~
+webの記事では正解率が98%になっているが、こちらでは95%程度とやや低かった。  
+再度実行すると90%に落ちてしまった。学習データもテストデータも自動生成のため、ばらつきがあるのかもしれない。  
+(また、配列の出力形式も違っていた。こちらでは要素ごとに改行されているので見づらい。。。)  
