@@ -9,7 +9,7 @@ TensorFlowのバージョンが古いのと、TensorBard関連のエラーが発
 顛末については[こちら](/TensorFlow/05.1_SUM_debugging.md)を参照。
 
 作成したソースコードはこちら。  
-[sum_reccurent.py](../source/TF_SUM/sum_reccurent.py)  
+[sum_reccurent.py](../source/TF_SUM/sum_reccurent.py)←処理内容のコメント作成中  
 
 実行結果は以下のようになった。  
 ~~~
