@@ -3,7 +3,7 @@
 ## トピックス
 [ディープラーニングについて](/topics/deeplarning.md)  
 [プロセッサのこと](/topics/processor.md)  
-[強いAI・弱いAI](/topics/strong_weak.md)
+[強いAI・弱いAI](/topics/strong_weak.md)  
 [「ゼロから作るDeep Learning」を読んでみた](/DeepLearningFromScratch/00_top.md)←NEW!
 
 ## TensorFlowを使ったニューラルネットワークの実装

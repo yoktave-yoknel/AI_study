@@ -32,7 +32,7 @@
 過学習は重みが大きな値となることで発生することがしばしばある。  
 そのため、重みが大きくならないように調整するのが荷重減衰である。  
 具体的には誤差逆伝播法で求めた勾配に対して
-<img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\lambda W"/>
+<img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\lambda&space;W" title="\lambda W" />
 を加える。  
 <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\lambda"/>
 は荷重減衰の強さを決定するパラメータであり、
