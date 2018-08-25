@@ -14,6 +14,9 @@
 [再帰的ニューラルネットワークを使用した手書き文字認識](/TensorFlow/04_MNIST_recurrent.md)  
 [再帰的ニューラルネットワークを使用した合計値算出](/TensorFlow/05_SUM_recurrent.md)←作成中  
 
+## サンプルコード
+[サンプルコード置き場](https://github.com/yoktave-yoknel/AI_sample)
+
 ## マインドマップ
 ![AIについてのマインドマップ](/mindmap/AI_mindmap.jpg)
 
