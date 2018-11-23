@@ -7,6 +7,7 @@
 [「ゼロから作るDeep Learning」を読んでみた](/DeepLearningFromScratch/00_top.md)  
 [2018/06/14 NTTドコモ AI活用セミナー＆ミートアップ＠広島 参加メモ](/topics/20180614_docomoAI.md)  
 [2018/11/10 GCPUG Hiroshima #05 参加メモ(午前の部)](/topics/20181110_GCP_1.md)←NEW!  
+[2018/11/10 GCPUG Hiroshima #05 参加メモ(午後の部)](/topics/20181110_GCP_2.md)←NEW!  
 
 ## TensorFlowを使ったニューラルネットワークの実装
 [準備メモ](/TensorFlow/01_prepare.md)  
