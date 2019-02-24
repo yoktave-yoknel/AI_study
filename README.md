@@ -6,8 +6,8 @@
 [強いAI・弱いAI](/topics/strong_weak.md)  
 [「ゼロから作るDeep Learning」を読んでみた](/DeepLearningFromScratch/00_top.md)  
 [2018/06/14 NTTドコモ AI活用セミナー＆ミートアップ＠広島 参加メモ](/topics/20180614_docomoAI.md)  
-[2018/11/10 GCPUG Hiroshima #05 参加メモ(午前の部)](/topics/20181110_GCP_1.md)←NEW!  
-[2018/11/10 GCPUG Hiroshima #05 参加メモ(午後の部)](/topics/20181110_GCP_2.md)←NEW!  
+[2018/11/10 GCPUG Hiroshima #05 参加メモ(午前の部)](/topics/20181110_GCP_1.md)  
+[2018/11/10 GCPUG Hiroshima #05 参加メモ(午後の部)](/topics/20181110_GCP_2.md)  
 
 ## TensorFlowを使ったニューラルネットワークの実装
 [準備メモ](/TensorFlow/01_prepare.md)  
@@ -17,7 +17,9 @@
 [再帰的ニューラルネットワークを使用した合計値算出](/TensorFlow/05_SUM_recurrent.md)←作成中  
 
 ## サンプルコード
-[サンプルコード置き場](https://github.com/yoktave-yoknel/AI_sample)
+[サンプルコード置き場](https://github.com/yoktave-yoknel/AI_sample)  
+[Google colaboratoryでTF-IDFを試してみる](/source/google_colab/TF_IDF.ipynb)  
+※↑使用したファイルは [こちら](https://github.com/yoktave-yoknel/AI_study/tree/master/source/google_colab/TF_IDF_files)  
 
 ## マインドマップ
 ![AIについてのマインドマップ](/mindmap/AI_mindmap.jpg)
