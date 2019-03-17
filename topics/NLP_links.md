@@ -56,6 +56,18 @@ Doc2Vecを使って小説家になろうで自分好みの小説を見つけた�
 https://blog.aidemy.net/entry/2018/10/16/125954  
 ※Doc2Vecでベクトル化し、ウォード法で分類  
 
+・SCDV(Sparse Composite Document Vectors)  
+Word2VecやIDFをベースにして文書をベクトル化する手法。  
+
+文書ベクトルをお手軽に高い精度で作れるSCDVって実際どうなのか日本語コーパスで実験した(EMNLP2017)  
+https://qiita.com/fufufukakaka/items/a7316273908a7c400868  
+
+・FastText  
+Facebookが開発したもので、Word2Vec(Doc2Vec)とよく似ている。  
+
+高速と噂のfastTextの仕組み  
+https://qiita.com/n_kats_/items/2691c08639468e30abdd  
+
 ## 文章解析のサービスいろいろ
 
 ・ワトソン(IBM)  
@@ -78,3 +90,27 @@ https://www.traina.ai/
 ・COTOHA API Portal(NTT Com)  
 https://api.ce-cotoha.com/contents/index.html  
 ※検証用環境なら無料で使用できる。商用環境は13万円～。  
+
+・MAGELLAN BLOCKS)(グルーヴノーツ)  
+https://www.magellanic-clouds.com/blocks/  
+手軽に機械学習を利用できるクラウドサービス。  
+※Google Cloud Platformを利用している模様。  
+利用事例: 社内からの問い合わせに AI が即時回答  
+https://www.magellanic-clouds.com/blocks/customers/sjnk/  
+
+## ライブラリ(自分で作ってみる系)
+
+・gensim  
+自然言語解析のためのpythonライブラリ。  
+上記に記載した各種解析方法を一通り使用することができる。  
+
+TF-IDF  
+https://radimrehurek.com/gensim/models/tfidfmodel.html  
+LDA  
+https://radimrehurek.com/gensim/models/ldamodel.html  
+Word2Vec  
+https://radimrehurek.com/gensim/models/word2vec.html  
+Doc2Vec  
+https://radimrehurek.com/gensim/models/doc2vec.html  
+FastText  
+https://radimrehurek.com/gensim/models/fasttext.html  
