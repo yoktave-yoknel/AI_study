@@ -9,6 +9,7 @@
 [2018/11/10 GCPUG Hiroshima #05 参加メモ(午前の部)](/topics/20181110_GCP_1.md)  
 [2018/11/10 GCPUG Hiroshima #05 参加メモ(午後の部)](/topics/20181110_GCP_2.md)  
 [自然言語解析についてのリンク集](/topics/NLP_links.md)  
+[Google Colaboratoryを使ってみる](/topics/googlecolab.md)  
 
 ## TensorFlowを使ったニューラルネットワークの実装
 [準備メモ](/TensorFlow/01_prepare.md)  
