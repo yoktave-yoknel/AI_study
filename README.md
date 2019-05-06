@@ -20,8 +20,7 @@
 
 ## サンプルコード
 [サンプルコード置き場](https://github.com/yoktave-yoknel/AI_sample)  
-[Google colaboratoryでTF-IDFを試してみる](/source/google_colab/TF_IDF.ipynb)  
-※↑使用したファイルは [こちら](https://github.com/yoktave-yoknel/AI_study/tree/master/source/google_colab/TF_IDF_files)  
+[Google colaboratoryで類似文書検索を試してみる](/source/google_colab/document_similarity.ipynb)←NEW!  
 
 ## マインドマップ
 ![AIについてのマインドマップ](/mindmap/AI_mindmap.jpg)
